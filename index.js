@@ -1,15 +1,15 @@
 class Formatter {
   //add static methods here
   static capitalize(str){
-    return string.charAt(0).toUpperCase() + string.slice(1)
+    return str.charAt(0).toUpperCase() + str.slice(1)
   }
   
   static sanitize(str){
-    return string.replace(/[^A-Za-z0-9-' ]+/g, '')
+    return str.replace(/[^A-Za-z0-9-' ]+/g, '')
   }
   
   static titleize(str){
-    let word = string.split(' ');
+    let word = str.split(' ');
     let except = ['this','these','those','the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from','in','on']
     
     word[0] = this.capitalize(word[0]);
