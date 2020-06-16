@@ -4,17 +4,18 @@ class Formatter {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
   
-  static sanitize(string){
+  static sanitize(str){
     return string.replace(/[^A-Za-z0-9-' ]+/g, '')
   }
   
-  static titleize(string){
+  static titleize(str){
     let word = string.split(' ');
-    let except = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
+    let except = ['this','these','those','the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from','in','on']
+    
     word[0] = this.capitalize(word[0]);
-    for (let i = 1; i < words.length; i++) {
-      if(!except.find(e => e == word[i])){
-         word[i] = this.capitalize(word[i]);
+    for (let w = 1; w < words.length; w++) {
+      if(!except.find(nonWord => nonWord == word[i])){
+         word[w] = this.capitalize(word[w]);
       }
     }
     
