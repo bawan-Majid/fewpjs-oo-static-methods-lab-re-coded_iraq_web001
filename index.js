@@ -14,7 +14,7 @@ class Formatter {
     
     word[0] = this.capitalize(word[0]);
     for (let w = 1; w < word.length; w++) {
-      if(!except.find(nonWord => nonWord == word[i])){
+      if(!except.find(nonWord => nonWord == word[w])){
          word[w] = this.capitalize(word[w]);
       }
     }
