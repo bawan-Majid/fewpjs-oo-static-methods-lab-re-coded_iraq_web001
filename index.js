@@ -13,7 +13,7 @@ class Formatter {
     let except = ['this','these','those','the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from','in','on']
     
     word[0] = this.capitalize(word[0]);
-    for (let w = 1; w < words.length; w++) {
+    for (let w = 1; w < word.length; w++) {
       if(!except.find(nonWord => nonWord == word[i])){
          word[w] = this.capitalize(word[w]);
       }
