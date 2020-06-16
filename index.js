@@ -9,12 +9,12 @@ class Formatter {
   }
   
   static titleize(string){
-    let words = string.split(' ');
+    let word = string.split(' ');
     let except = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
-    words[0] = this.capitalize(words[0]);
+    word[0] = this.capitalize(word[0]);
     for (let i = 1; i < words.length; i++) {
-      if(!except.find(e => e == words[i])){
-         words[i] = this.capitalize(words[i]);
+      if(!except.find(e => e == word[i])){
+         word[i] = this.capitalize(word[i]);
       }
     }
     
