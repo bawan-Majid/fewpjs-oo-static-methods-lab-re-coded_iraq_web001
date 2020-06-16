@@ -19,6 +19,6 @@ class Formatter {
       }
     }
     
-    return words.join(' ');
+    return word.join(' ');
 }
 }
